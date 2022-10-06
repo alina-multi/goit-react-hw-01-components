@@ -1,18 +1,22 @@
 import PropTypes from 'prop-types';
-import css from  "./UserDescription.module.css"
+import {Description,ProfileImg, Avatar, Name, Tag, Location}  from "./UserDescription.styled"
 
 export const UserDescription = ({ user: { username, tag, location, avatar } }) => {
-   return <div className={css.description}>
-      <img
-         src={avatar}
-         alt="User avatar"
-         className="avatar"
-         width="200px"
-      />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-   </div>;
+   return <Description>
+      
+      <ProfileImg>
+         <Avatar
+            src={avatar}
+            alt="User avatar"           
+         /></ProfileImg>
+     
+     
+      <Name>{username.toUpperCase()}</Name>
+      <Tag>@{tag}</Tag>
+      <Location>{location}</Location>
+     
+      
+   </Description>;
 
 };
 
@@ -28,3 +32,4 @@ UserDescription.propTypes = {
    // tag: PropTypes.array,
 }
 
+   

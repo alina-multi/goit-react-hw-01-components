@@ -1,12 +1,21 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { UserDescription } from "./UserDescription/UserDescription"
 import { StatusInfo } from './StatusInfo/StatusInfo'
-import css from  "./Profile.module.css"
+import { Card } from './Profile.styled'
+
 
 export const Profile = ({user}) => { 
-    return <div className={css.profile}>
+    return <div>
+         <Card>
     < UserDescription user={user} />
-    < StatusInfo stats={user.stats} />
+            < StatusInfo stats={user.stats} />
+            </Card>
 </div>
+    
+   
+}
+
+Profile.propTypes = {
+    friends: PropTypes.object
 }
 

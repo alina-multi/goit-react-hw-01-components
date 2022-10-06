@@ -1,7 +1,10 @@
+import { Head } from "./TransactionTableHead.styled"
+
 export const TransactionTableHead = () => { 
-    return <tr>
+    return <Head>
         <th>Type</th>
         <th>Amount</th>
         <th>Currency</th>
-    </tr>;
+    </Head>;
 }
+
